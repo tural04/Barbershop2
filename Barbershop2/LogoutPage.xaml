@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Опредяеляет страницу с контентом-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Выход"
+             x:Class="Barbershop2.LogoutPage" NavigationPage.HasNavigationBar="False">
+
+    <!--Контент страницы-->
+    <ContentPage.Content>
+        <!--Вертикальный контейнер для размещения элементов-->
+        <StackLayout Padding="20">
+            <!--Отображает текст-->
+            <Label Text="Вы действительно хотите выйти?"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="17" TextColor="Black" Margin="20"/>
+            <!--Кнопки для перехода на страницы-->
+            <Button Text="Выйти" Clicked="LogoutButtonClicked"/>
+            <Button Text="Отмена" Clicked="CancelButtonClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

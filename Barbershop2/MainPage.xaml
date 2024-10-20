@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--Определение страницы пользовательскогого интерфейса-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Barbershop2.MainPage" 
+             NavigationPage.HasNavigationBar="False" BackgroundColor="Black"> <!--Отключение отображения навигационной панели-->
+
+    <!--Создает вертикальный для размещения элементов-->
+    <StackLayout Padding="20">
+        <!--Создает контейнер с закругленными углами и фоном-->
+        <Frame BackgroundColor="#111" CornerRadius="0">
+            <Label Text="Регистрация" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" FontSize="20"/>
+        </Frame>
+        <!--Отображает изображение-->
+        <Image Source="barbermafia.png" Aspect="AspectFit" HeightRequest="200"/>
+        <!--Элемент ввода для имени-->
+        <Entry
+            x:Name="nameEntry" 
+       Placeholder="Введите ваше имя" 
+       PlaceholderColor="White" 
+       Keyboard="Text" 
+       TextColor="White"/>
+        <!--Элемент ввода для почты-->
+        <Entry 
+    x:Name="emailEntry"
+    Placeholder="Введите вашу почту" 
+    PlaceholderColor="White" 
+    Keyboard="Email" 
+    TextColor="White"/>
+        <!--Элемент ввода для пароля-->
+        <Entry 
+            x:Name="passwordEntry"
+    Placeholder="Введите пароль"
+       PlaceholderColor="White" 
+       Keyboard="Text" 
+       TextColor="White" 
+       IsPassword="True"/>
+        <!--Кнопка "Зарегистрироваться" с привязкой к событию OnRegisterButtonClicked.-->
+        <Button Text="Зарегистрироваться" Clicked="OnRegisterButtonClicked"/>
+    </StackLayout>
+
+</ContentPage>
+

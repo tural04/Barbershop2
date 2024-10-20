@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Определяет страницу с контентом-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Запись" BackgroundColor="White"
+             x:Class="Barbershop2.BarberRegistrPage">
+
+    <!--Вертикальный контейнер для размещения элементов-->
+    <StackLayout VerticalOptions="FillAndExpand" Padding="20">
+        <!--Отображается текст и выпадающий список для выбора барбера-->
+        <Label Text="Выберите барбера" />
+        <Picker x:Name="barberPicker">
+            <Picker.Items>
+                <x:String>Бабаев Турал</x:String>
+                <x:String>Синтялев Александр</x:String>
+                <x:String>Иван Иванов</x:String>
+            </Picker.Items>
+        </Picker>
+        <!--Отображается текст и выпадающий список для выбора услуги-->
+        <Label Text="Выберите услугу" />
+        <Picker x:Name="servicesPicker">
+            <Picker.Items>
+                <x:String>Мужская прическа - 900руб </x:String>
+                <x:String>Борода - 700руб</x:String>
+                <x:String>Прическа + Борода - 1600руб</x:String>
+                <x:String>Нет</x:String>
+            </Picker.Items>
+        </Picker>
+        <!--Отображается текст и выпадающий список для выбора дополнительной услуги-->
+        <Label Text="Выберите дополнительную услугу" />
+        <Picker x:Name="addservicesPicker">
+            <Picker.Items>
+                <x:String>Горячий воск - 300руб</x:String>
+                <x:String>Черная маска - 300руб</x:String>
+                <x:String>Горячий воск + Черная маска - 600руб</x:String>
+                <x:String>Нет</x:String>
+            </Picker.Items>
+        </Picker>
+        <!--Элементы для выбора даты и времени-->
+        <Label Text="Дата и время записи" />
+        <DatePicker x:Name="datePicker" />
+        <TimePicker x:Name="timePicker" />
+
+        <!--Кнопка для подтверждения записи-->
+        <Button Text="Записаться" Clicked="BarberservicesButtonClicked" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

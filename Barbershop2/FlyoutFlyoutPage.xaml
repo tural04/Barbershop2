@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--Определяет страницу с боковым меню-->
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Barbershop2.FlyoutFlyoutPage"
+            xmlns:local="clr-namespace:Barbershop2"
+            NavigationPage.HasNavigationBar="False">
+    
+    <!--Определяет контент для бокового меню с использовыанием FlyoutMenuPage-->
+    <FlyoutPage.Flyout>
+    <local:FlyoutMenuPage x:Name="flyout" BackgroundColor="White"/>
+    </FlyoutPage.Flyout>
+    <!--Определает основной контент страницы с использованием HomePage-->
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:HomePage/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+    
+</FlyoutPage>

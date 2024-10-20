@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Определяет страницу с контентом-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="О нас" BackgroundColor="White"
+             x:Class="Barbershop2.HomePage">
+
+    <!--Определяет контент страницы-->
+    <ContentPage.Content>
+        <!--Для прокрутки страницы вверх-вниз-->
+        <ScrollView>
+            <!--Создает вертикальный контейнер для размещения контента-->
+            <StackLayout VerticalOptions="Center">
+                <!--Отображает картинку-->
+                <Image Source="barbermafia.png" Aspect="AspectFit" HeightRequest="200"/>
+                <!--Отображает текст-->
+                <Label Text="Миссия BarberMafia обеспечить нашим клиентам высококачественные и профессиональные услуги по уходу за своими волосами, а в частности – причёски волос и бороды." 
+                   FontSize="21" TextColor="Black" Margin="10"/>
+            <Label Text="Также наш Барбершоп обеспечивает другие высококлассные услуги по уходу за внешностью клиентов. 
+Эти услуги помогают нашим клиентам чувствовать себя уверенно и стильно." 
+                   FontSize="21" TextColor="Black" Margin="10"/>
+                <!--Горизонтальная линия-->
+                <BoxView HeightRequest="1" Color="Black" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                <Label Text="Контакты для связи:" 
+                   FontSize="18" TextColor="Black" Margin="10"/>
+                <Label Text="89998767766 / 87776548899" 
+                       FontSize="18" TextColor="Black" Margin="10"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
